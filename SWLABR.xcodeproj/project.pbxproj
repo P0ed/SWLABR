@@ -13,7 +13,38 @@
 		5F9E319D1C72649100BE2995 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F9E319C1C72649100BE2995 /* art.scnassets */; };
 		5F9E319F1C72649100BE2995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F9E319E1C72649100BE2995 /* Assets.xcassets */; };
 		5F9E31A21C72649100BE2995 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9E31A01C72649100BE2995 /* MainMenu.xib */; };
+		D6F166651C7C587F00692ED4 /* SpriteKitUI.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F166641C7C587F00692ED4 /* SpriteKitUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6F166691C7C587F00692ED4 /* SpriteKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */; };
+		D6F1666A1C7C587F00692ED4 /* SpriteKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D6F166711C7C606900692ED4 /* TableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F166701C7C606900692ED4 /* TableNode.swift */; };
+		D6F166731C7C60F300692ED4 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F166721C7C60F300692ED4 /* TableViewModel.swift */; };
+		D6F166751C7C615600692ED4 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F166741C7C615600692ED4 /* TableModel.swift */; };
+		D6F166781C7C620D00692ED4 /* CollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F166771C7C620D00692ED4 /* CollectionModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6F166671C7C587F00692ED4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F9E318B1C72649100BE2995 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6F166611C7C587F00692ED4;
+			remoteInfo = SpriteKitUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D6F1666E1C7C587F00692ED4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D6F1666A1C7C587F00692ED4 /* SpriteKitUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5F9E31931C72649100BE2995 /* SWLABR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWLABR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +55,25 @@
 		5F9E319E1C72649100BE2995 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F9E31A11C72649100BE2995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5F9E31A31C72649100BE2995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F166641C7C587F00692ED4 /* SpriteKitUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteKitUI.h; sourceTree = "<group>"; };
+		D6F166661C7C587F00692ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6F166701C7C606900692ED4 /* TableNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableNode.swift; sourceTree = "<group>"; };
+		D6F166721C7C60F300692ED4 /* TableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		D6F166741C7C615600692ED4 /* TableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
+		D6F166771C7C620D00692ED4 /* CollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5F9E31901C72649100BE2995 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F166691C7C587F00692ED4 /* SpriteKitUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F1665E1C7C587F00692ED4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				5F9E31951C72649100BE2995 /* SWLABR */,
+				D6F166631C7C587F00692ED4 /* SpriteKitUI */,
 				5F9E31941C72649100BE2995 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				5F9E31931C72649100BE2995 /* SWLABR.app */,
+				D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,7 +115,47 @@
 			path = SWLABR;
 			sourceTree = "<group>";
 		};
+		D6F166631C7C587F00692ED4 /* SpriteKitUI */ = {
+			isa = PBXGroup;
+			children = (
+				D6F166761C7C61CC00692ED4 /* CollectionModel */,
+				D6F1666F1C7C602B00692ED4 /* TableNode */,
+				D6F166641C7C587F00692ED4 /* SpriteKitUI.h */,
+				D6F166661C7C587F00692ED4 /* Info.plist */,
+			);
+			path = SpriteKitUI;
+			sourceTree = "<group>";
+		};
+		D6F1666F1C7C602B00692ED4 /* TableNode */ = {
+			isa = PBXGroup;
+			children = (
+				D6F166701C7C606900692ED4 /* TableNode.swift */,
+				D6F166721C7C60F300692ED4 /* TableViewModel.swift */,
+				D6F166741C7C615600692ED4 /* TableModel.swift */,
+			);
+			path = TableNode;
+			sourceTree = "<group>";
+		};
+		D6F166761C7C61CC00692ED4 /* CollectionModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6F166771C7C620D00692ED4 /* CollectionModel.swift */,
+			);
+			path = CollectionModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D6F1665F1C7C587F00692ED4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F166651C7C587F00692ED4 /* SpriteKitUI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		5F9E31921C72649100BE2995 /* SWLABR */ = {
@@ -77,15 +165,35 @@
 				5F9E318F1C72649100BE2995 /* Sources */,
 				5F9E31901C72649100BE2995 /* Frameworks */,
 				5F9E31911C72649100BE2995 /* Resources */,
+				D6F1666E1C7C587F00692ED4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D6F166681C7C587F00692ED4 /* PBXTargetDependency */,
 			);
 			name = SWLABR;
 			productName = SWLABR;
 			productReference = 5F9E31931C72649100BE2995 /* SWLABR.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D6F166611C7C587F00692ED4 /* SpriteKitUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6F1666D1C7C587F00692ED4 /* Build configuration list for PBXNativeTarget "SpriteKitUI" */;
+			buildPhases = (
+				D6F1665D1C7C587F00692ED4 /* Sources */,
+				D6F1665E1C7C587F00692ED4 /* Frameworks */,
+				D6F1665F1C7C587F00692ED4 /* Headers */,
+				D6F166601C7C587F00692ED4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpriteKitUI;
+			productName = SpriteKitUI;
+			productReference = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +207,9 @@
 				TargetAttributes = {
 					5F9E31921C72649100BE2995 = {
 						CreatedOnToolsVersion = 7.2.1;
+					};
+					D6F166611C7C587F00692ED4 = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -116,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				5F9E31921C72649100BE2995 /* SWLABR */,
+				D6F166611C7C587F00692ED4 /* SpriteKitUI */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +240,13 @@
 				5F9E319F1C72649100BE2995 /* Assets.xcassets in Resources */,
 				5F9E319D1C72649100BE2995 /* art.scnassets in Resources */,
 				5F9E31A21C72649100BE2995 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F166601C7C587F00692ED4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +263,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6F1665D1C7C587F00692ED4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F166711C7C606900692ED4 /* TableNode.swift in Sources */,
+				D6F166781C7C620D00692ED4 /* CollectionModel.swift in Sources */,
+				D6F166731C7C60F300692ED4 /* TableViewModel.swift in Sources */,
+				D6F166751C7C615600692ED4 /* TableModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6F166681C7C587F00692ED4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6F166611C7C587F00692ED4 /* SpriteKitUI */;
+			targetProxy = D6F166671C7C587F00692ED4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5F9E31A01C72649100BE2995 /* MainMenu.xib */ = {
@@ -243,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SWLABR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.p0ed.SWLABR;
@@ -255,10 +394,57 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SWLABR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.p0ed.SWLABR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D6F1666B1C7C587F00692ED4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SpriteKitUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.Poed.SpriteKitUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D6F1666C1C7C587F00692ED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = SpriteKitUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.Poed.SpriteKitUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -279,6 +465,15 @@
 			buildConfigurations = (
 				5F9E31A71C72649100BE2995 /* Debug */,
 				5F9E31A81C72649100BE2995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F1666D1C7C587F00692ED4 /* Build configuration list for PBXNativeTarget "SpriteKitUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F1666B1C7C587F00692ED4 /* Debug */,
+				D6F1666C1C7C587F00692ED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
