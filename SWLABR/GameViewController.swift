@@ -5,7 +5,7 @@ class GameViewController: NSViewController {
     
     @IBOutlet weak var gameView: GameView!
     
-    override func awakeFromNib(){
+    override func awakeFromNib() {
         // create a new scene
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
         
