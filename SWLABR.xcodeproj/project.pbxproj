@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F33722A1C80F68500684F63 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26D1C7C69D300D06459 /* RxCocoa.framework */; };
+		5F33722B1C80F68500684F63 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26B1C7C69D300D06459 /* RxBlocking.framework */; };
+		5F33722C1C80F68500684F63 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26F1C7C69D300D06459 /* RxSwift.framework */; };
+		5F33722D1C80F68500684F63 /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED2691C7C69D300D06459 /* OpenEmuSystem.framework */; };
+		5F33722E1C80F68500684F63 /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED2671C7C69D300D06459 /* OpenEmuBase.framework */; };
+		5F3372341C80F6B800684F63 /* OpenEmuBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED2671C7C69D300D06459 /* OpenEmuBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F3372361C80F6B800684F63 /* OpenEmuSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED2691C7C69D300D06459 /* OpenEmuSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F3372371C80F6B800684F63 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26B1C7C69D300D06459 /* RxBlocking.framework */; };
+		5F3372381C80F6B800684F63 /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26B1C7C69D300D06459 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F33723A1C80F6B800684F63 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26D1C7C69D300D06459 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5F33723C1C80F6B800684F63 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26F1C7C69D300D06459 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F4ED2731C7C69D300D06459 /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED2671C7C69D300D06459 /* OpenEmuBase.framework */; };
 		5F4ED2751C7C69D300D06459 /* OpenEmuSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED2691C7C69D300D06459 /* OpenEmuSystem.framework */; };
-		5F4ED2771C7C69D300D06459 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26B1C7C69D300D06459 /* RxBlocking.framework */; };
 		5F4ED2791C7C69D300D06459 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26D1C7C69D300D06459 /* RxCocoa.framework */; };
 		5F4ED27B1C7C69D300D06459 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26F1C7C69D300D06459 /* RxSwift.framework */; };
 		5F9E31971C72649100BE2995 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9E31961C72649100BE2995 /* AppDelegate.swift */; };
@@ -44,6 +54,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5F33723A1C80F6B800684F63 /* RxCocoa.framework in Embed Frameworks */,
+				5F33723C1C80F6B800684F63 /* RxSwift.framework in Embed Frameworks */,
+				5F3372381C80F6B800684F63 /* RxBlocking.framework in Embed Frameworks */,
+				5F3372361C80F6B800684F63 /* OpenEmuSystem.framework in Embed Frameworks */,
+				5F3372341C80F6B800684F63 /* OpenEmuBase.framework in Embed Frameworks */,
 				D6F1666A1C7C587F00692ED4 /* SpriteKitUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -52,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5F33722F1C80F68500684F63 /* RxTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTests.framework; path = Carthage/Build/Mac/RxTests.framework; sourceTree = "<group>"; };
 		5F4ED2611C7C672200D06459 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
 		5F4ED2631C7C68C400D06459 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5F4ED2671C7C69D300D06459 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = "<group>"; };
@@ -77,16 +93,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5F3372291C80F66900684F63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F33722A1C80F68500684F63 /* RxCocoa.framework in Frameworks */,
+				5F33722B1C80F68500684F63 /* RxBlocking.framework in Frameworks */,
+				5F33722C1C80F68500684F63 /* RxSwift.framework in Frameworks */,
+				5F33722D1C80F68500684F63 /* OpenEmuSystem.framework in Frameworks */,
+				5F33722E1C80F68500684F63 /* OpenEmuBase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5F9E31901C72649100BE2995 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D6F166691C7C587F00692ED4 /* SpriteKitUI.framework in Frameworks */,
+				5F3372371C80F6B800684F63 /* RxBlocking.framework in Frameworks */,
 				5F4ED27B1C7C69D300D06459 /* RxSwift.framework in Frameworks */,
 				5F4ED2791C7C69D300D06459 /* RxCocoa.framework in Frameworks */,
 				5F4ED2731C7C69D300D06459 /* OpenEmuBase.framework in Frameworks */,
 				5F4ED2751C7C69D300D06459 /* OpenEmuSystem.framework in Frameworks */,
-				5F4ED2771C7C69D300D06459 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +153,7 @@
 		5F9E318A1C72649100BE2995 = {
 			isa = PBXGroup;
 			children = (
+				5F33722F1C80F68500684F63 /* RxTests.framework */,
 				5F4ED2631C7C68C400D06459 /* README.md */,
 				5F4ED2601C7C671A00D06459 /* Carthage */,
 				5F9E31951C72649100BE2995 /* SWLABR */,
@@ -225,6 +254,7 @@
 				D6F1665D1C7C587F00692ED4 /* Sources */,
 				D6F1665F1C7C587F00692ED4 /* Headers */,
 				D6F166601C7C587F00692ED4 /* Resources */,
+				5F3372291C80F66900684F63 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -461,6 +491,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SpriteKitUI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -484,6 +518,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SpriteKitUI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

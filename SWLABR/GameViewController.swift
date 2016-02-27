@@ -7,7 +7,15 @@ class GameViewController: NSViewController {
     
     override func awakeFromNib() {
         // create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene(named: "art.scnassets/Light Ship/light_ship.scn")!
+		scene.background.contents = [
+			"skybox_right1",
+			"skybox_left2",
+			"skybox_top3",
+			"skybox_bottom4",
+			"skybox_front5",
+			"skybox_back6"
+		]
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
@@ -33,13 +41,6 @@ class GameViewController: NSViewController {
         
         // retrieve the ship node
         let _ = scene.rootNode.childNodeWithName("ship", recursively: true)!
-        
-//        // animate the 3d object
-//        let animation = CABasicAnimation(keyPath: "rotation")
-//        animation.toValue = NSValue(SCNVector4: SCNVector4(x: CGFloat(0), y: CGFloat(1), z: CGFloat(0), w: CGFloat(M_PI)*2))
-//        animation.duration = 3
-//        animation.repeatCount = MAXFLOAT //repeat forever
-//        ship.addAnimation(animation, forKey: nil)
 
         // set the scene to the view
         self.gameView.scene = scene
@@ -52,6 +53,7 @@ class GameViewController: NSViewController {
         
         // configure the view
         self.gameView.backgroundColor = NSColor.blackColor()
+
     }
 
 }
