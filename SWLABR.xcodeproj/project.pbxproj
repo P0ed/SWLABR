@@ -85,7 +85,6 @@
 		5F9E31A31C72649100BE2995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA2959E1C81F71E00FBB0B8 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		5FA2959F1C81F71E00FBB0B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5FA295A01C81F71E00FBB0B8 /* skybox.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = skybox.xml; sourceTree = "<group>"; };
 		5FF22FC01C8B116900EF9E97 /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		5FF22FC11C8B116900EF9E97 /* ShipActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipActor.swift; sourceTree = "<group>"; };
 		5FF22FC41C8B11A100EF9E97 /* ShipAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipAttributes.swift; sourceTree = "<group>"; };
@@ -196,7 +195,6 @@
 			children = (
 				5FA2959E1C81F71E00FBB0B8 /* art.scnassets */,
 				5FA2959F1C81F71E00FBB0B8 /* Assets.xcassets */,
-				5FA295A01C81F71E00FBB0B8 /* skybox.xml */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

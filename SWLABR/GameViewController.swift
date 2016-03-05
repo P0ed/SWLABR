@@ -72,7 +72,7 @@ class GameViewController: NSViewController, SCNSceneRendererDelegate {
 
 		let targetPos = double3(
 			shipPos.x + cameraDistance * shipOrt.y * shipOrt.y,
-			shipPos.y + cameraDistance * shipOrt.z * shipOrt.z,
+			shipPos.y + cameraDistance * shipOrt.z * shipOrt.z + 0.5,
 			shipPos.z + cameraDistance * shipOrt.w * shipOrt.w
 		)
 
