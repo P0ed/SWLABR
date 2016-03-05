@@ -30,7 +30,13 @@
 		5FA295A21C81F71E00FBB0B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA2959F1C81F71E00FBB0B8 /* Assets.xcassets */; };
 		5FF22FC21C8B116900EF9E97 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FC01C8B116900EF9E97 /* Actor.swift */; };
 		5FF22FC31C8B116900EF9E97 /* ShipActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FC11C8B116900EF9E97 /* ShipActor.swift */; };
-		5FF22FC51C8B11A100EF9E97 /* ShipAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FC41C8B11A100EF9E97 /* ShipAttributes.swift */; };
+		5FF22FCA1C8B56D200EF9E97 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FC91C8B56D200EF9E97 /* Input.swift */; };
+		5FF22FCD1C8B56FB00EF9E97 /* ShipAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FCC1C8B56FB00EF9E97 /* ShipAttributes.swift */; };
+		5FF22FD41C8B6D1100EF9E97 /* Controller-Database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FF22FCF1C8B6D1100EF9E97 /* Controller-Database.plist */; };
+		5FF22FD51C8B6D1100EF9E97 /* DeviceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FD01C8B6D1100EF9E97 /* DeviceAction.swift */; };
+		5FF22FD61C8B6D1100EF9E97 /* DeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FD11C8B6D1100EF9E97 /* DeviceConfiguration.swift */; };
+		5FF22FD71C8B6D1100EF9E97 /* DSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FD21C8B6D1100EF9E97 /* DSExtensions.swift */; };
+		5FF22FD81C8B6D1100EF9E97 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FD31C8B6D1100EF9E97 /* EventsController.swift */; };
 		D6F166651C7C587F00692ED4 /* SpriteKitUI.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F166641C7C587F00692ED4 /* SpriteKitUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6F166691C7C587F00692ED4 /* SpriteKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */; };
 		D6F1666A1C7C587F00692ED4 /* SpriteKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -87,7 +93,13 @@
 		5FA2959F1C81F71E00FBB0B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FF22FC01C8B116900EF9E97 /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		5FF22FC11C8B116900EF9E97 /* ShipActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipActor.swift; sourceTree = "<group>"; };
-		5FF22FC41C8B11A100EF9E97 /* ShipAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipAttributes.swift; sourceTree = "<group>"; };
+		5FF22FC91C8B56D200EF9E97 /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		5FF22FCC1C8B56FB00EF9E97 /* ShipAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipAttributes.swift; sourceTree = "<group>"; };
+		5FF22FCF1C8B6D1100EF9E97 /* Controller-Database.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Controller-Database.plist"; sourceTree = "<group>"; };
+		5FF22FD01C8B6D1100EF9E97 /* DeviceAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceAction.swift; sourceTree = "<group>"; };
+		5FF22FD11C8B6D1100EF9E97 /* DeviceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceConfiguration.swift; sourceTree = "<group>"; };
+		5FF22FD21C8B6D1100EF9E97 /* DSExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSExtensions.swift; sourceTree = "<group>"; };
+		5FF22FD31C8B6D1100EF9E97 /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F166641C7C587F00692ED4 /* SpriteKitUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteKitUI.h; sourceTree = "<group>"; };
 		D6F166661C7C587F00692ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,6 +190,7 @@
 		5F9E31951C72649100BE2995 /* SWLABR */ = {
 			isa = PBXGroup;
 			children = (
+				5FF22FCE1C8B6D1100EF9E97 /* GamepadKit */,
 				5FF22FBA1C8B10AF00EF9E97 /* Model */,
 				5FF22FB91C8B108E00EF9E97 /* SpaceScene */,
 				5FA2959D1C81F71E00FBB0B8 /* Resources */,
@@ -209,8 +222,9 @@
 		5FF22FBA1C8B10AF00EF9E97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5FF22FCB1C8B56EA00EF9E97 /* ShipAttributes */,
+				5FF22FC81C8B56C800EF9E97 /* Input */,
 				5FF22FBF1C8B115E00EF9E97 /* Actors */,
-				5FF22FC41C8B11A100EF9E97 /* ShipAttributes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +236,34 @@
 				5FF22FC11C8B116900EF9E97 /* ShipActor.swift */,
 			);
 			path = Actors;
+			sourceTree = "<group>";
+		};
+		5FF22FC81C8B56C800EF9E97 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				5FF22FC91C8B56D200EF9E97 /* Input.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		5FF22FCB1C8B56EA00EF9E97 /* ShipAttributes */ = {
+			isa = PBXGroup;
+			children = (
+				5FF22FCC1C8B56FB00EF9E97 /* ShipAttributes.swift */,
+			);
+			path = ShipAttributes;
+			sourceTree = "<group>";
+		};
+		5FF22FCE1C8B6D1100EF9E97 /* GamepadKit */ = {
+			isa = PBXGroup;
+			children = (
+				5FF22FCF1C8B6D1100EF9E97 /* Controller-Database.plist */,
+				5FF22FD01C8B6D1100EF9E97 /* DeviceAction.swift */,
+				5FF22FD11C8B6D1100EF9E97 /* DeviceConfiguration.swift */,
+				5FF22FD21C8B6D1100EF9E97 /* DSExtensions.swift */,
+				5FF22FD31C8B6D1100EF9E97 /* EventsController.swift */,
+			);
+			path = GamepadKit;
 			sourceTree = "<group>";
 		};
 		D6F166631C7C587F00692ED4 /* SpriteKitUI */ = {
@@ -347,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F9E31A21C72649100BE2995 /* MainMenu.xib in Resources */,
+				5FF22FD41C8B6D1100EF9E97 /* Controller-Database.plist in Resources */,
 				5FA295A21C81F71E00FBB0B8 /* Assets.xcassets in Resources */,
 				5FA295A11C81F71E00FBB0B8 /* art.scnassets in Resources */,
 			);
@@ -366,11 +409,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF22FCA1C8B56D200EF9E97 /* Input.swift in Sources */,
 				5FF22FC31C8B116900EF9E97 /* ShipActor.swift in Sources */,
+				5FF22FD71C8B6D1100EF9E97 /* DSExtensions.swift in Sources */,
+				5FF22FD61C8B6D1100EF9E97 /* DeviceConfiguration.swift in Sources */,
 				5F9E31991C72649100BE2995 /* GameView.swift in Sources */,
-				5FF22FC51C8B11A100EF9E97 /* ShipAttributes.swift in Sources */,
+				5FF22FD81C8B6D1100EF9E97 /* EventsController.swift in Sources */,
+				5FF22FD51C8B6D1100EF9E97 /* DeviceAction.swift in Sources */,
 				5F9E319B1C72649100BE2995 /* GameViewController.swift in Sources */,
 				5F9E31971C72649100BE2995 /* AppDelegate.swift in Sources */,
+				5FF22FCD1C8B56FB00EF9E97 /* ShipAttributes.swift in Sources */,
 				5FF22FC21C8B116900EF9E97 /* Actor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
