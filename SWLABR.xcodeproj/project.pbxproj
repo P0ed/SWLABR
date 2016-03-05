@@ -28,6 +28,9 @@
 		5F9E31A21C72649100BE2995 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9E31A01C72649100BE2995 /* MainMenu.xib */; };
 		5FA295A11C81F71E00FBB0B8 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA2959E1C81F71E00FBB0B8 /* art.scnassets */; };
 		5FA295A21C81F71E00FBB0B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA2959F1C81F71E00FBB0B8 /* Assets.xcassets */; };
+		5FF22FC21C8B116900EF9E97 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FC01C8B116900EF9E97 /* Actor.swift */; };
+		5FF22FC31C8B116900EF9E97 /* ShipActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FC11C8B116900EF9E97 /* ShipActor.swift */; };
+		5FF22FC51C8B11A100EF9E97 /* ShipAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FC41C8B11A100EF9E97 /* ShipAttributes.swift */; };
 		D6F166651C7C587F00692ED4 /* SpriteKitUI.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F166641C7C587F00692ED4 /* SpriteKitUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6F166691C7C587F00692ED4 /* SpriteKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */; };
 		D6F1666A1C7C587F00692ED4 /* SpriteKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -83,6 +86,9 @@
 		5FA2959E1C81F71E00FBB0B8 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		5FA2959F1C81F71E00FBB0B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FA295A01C81F71E00FBB0B8 /* skybox.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = skybox.xml; sourceTree = "<group>"; };
+		5FF22FC01C8B116900EF9E97 /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		5FF22FC11C8B116900EF9E97 /* ShipActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipActor.swift; sourceTree = "<group>"; };
+		5FF22FC41C8B11A100EF9E97 /* ShipAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipAttributes.swift; sourceTree = "<group>"; };
 		D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F166641C7C587F00692ED4 /* SpriteKitUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteKitUI.h; sourceTree = "<group>"; };
 		D6F166661C7C587F00692ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,6 +179,8 @@
 		5F9E31951C72649100BE2995 /* SWLABR */ = {
 			isa = PBXGroup;
 			children = (
+				5FF22FBA1C8B10AF00EF9E97 /* Model */,
+				5FF22FB91C8B108E00EF9E97 /* SpaceScene */,
 				5FA2959D1C81F71E00FBB0B8 /* Resources */,
 				5F9E31961C72649100BE2995 /* AppDelegate.swift */,
 				5F9E31981C72649100BE2995 /* GameView.swift */,
@@ -191,6 +199,31 @@
 				5FA295A01C81F71E00FBB0B8 /* skybox.xml */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		5FF22FB91C8B108E00EF9E97 /* SpaceScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SpaceScene;
+			sourceTree = "<group>";
+		};
+		5FF22FBA1C8B10AF00EF9E97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FF22FBF1C8B115E00EF9E97 /* Actors */,
+				5FF22FC41C8B11A100EF9E97 /* ShipAttributes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FF22FBF1C8B115E00EF9E97 /* Actors */ = {
+			isa = PBXGroup;
+			children = (
+				5FF22FC01C8B116900EF9E97 /* Actor.swift */,
+				5FF22FC11C8B116900EF9E97 /* ShipActor.swift */,
+			);
+			path = Actors;
 			sourceTree = "<group>";
 		};
 		D6F166631C7C587F00692ED4 /* SpriteKitUI */ = {
@@ -335,9 +368,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF22FC31C8B116900EF9E97 /* ShipActor.swift in Sources */,
 				5F9E31991C72649100BE2995 /* GameView.swift in Sources */,
+				5FF22FC51C8B11A100EF9E97 /* ShipAttributes.swift in Sources */,
 				5F9E319B1C72649100BE2995 /* GameViewController.swift in Sources */,
 				5F9E31971C72649100BE2995 /* AppDelegate.swift in Sources */,
+				5FF22FC21C8B116900EF9E97 /* Actor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

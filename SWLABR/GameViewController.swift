@@ -52,18 +52,6 @@ class GameViewController: NSViewController, SCNSceneRendererDelegate {
 		updateCamera(cameraNode, ship: shipNode)
 	}
 
-//	func renderer(renderer: SCNSceneRenderer, didSimulatePhysicsAtTime time: NSTimeInterval) {
-//
-//		updateCamera(cameraNode, ship: shipNode.presentationNode)
-//
-////		SCNNode *car = [_vehicleNode presentationNode];
-////		SCNVector3 carPos = car.position;
-////		vector_float3 targetPos = {carPos.x, 30., carPos.z + 25.};
-////		vector_float3 cameraPos = SCNVector3ToFloat3(_cameraNode.position);
-////		cameraPos = vector_mix(cameraPos, targetPos, (vector_float3)(cameraDamping));
-////		_cameraNode.position = SCNVector3FromFloat3(cameraPos);
-//	}
-
 	func createShip() -> SCNNode {
 		let shipGeometry = SCNBox(width: 0.75, height: 0.25, length: 1, chamferRadius: 0)
 		let material = SCNMaterial()
@@ -90,8 +78,6 @@ class GameViewController: NSViewController, SCNSceneRendererDelegate {
 
 		let newOrt = vector_mix(camera.orientation.vector4, shipOrt, ortDamping)
 		let newPos = vector_mix(camera.position.vector3, targetPos, posDamping)
-
-		print("ship: \(shipPos)\ncam:  \(newPos)")
 
 		camera.orientation = SCNQuaternion(newOrt)
 		camera.position = SCNVector3(newPos)
