@@ -67,7 +67,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5F33722F1C80F68500684F63 /* RxTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTests.framework; path = Carthage/Build/Mac/RxTests.framework; sourceTree = "<group>"; };
 		5F4ED2611C7C672200D06459 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
 		5F4ED2631C7C68C400D06459 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5F4ED2671C7C69D300D06459 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = "<group>"; };
@@ -154,7 +153,6 @@
 		5F9E318A1C72649100BE2995 = {
 			isa = PBXGroup;
 			children = (
-				5F33722F1C80F68500684F63 /* RxTests.framework */,
 				5F4ED2631C7C68C400D06459 /* README.md */,
 				5F9E31951C72649100BE2995 /* SWLABR */,
 				D6F166631C7C587F00692ED4 /* SpriteKitUI */,
