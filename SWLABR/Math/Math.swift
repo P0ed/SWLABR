@@ -59,7 +59,6 @@ func *(lhs: Vector3, rhs: Scalar) -> Vector3 {
 }
 
 func *(v: Vector3, q: Quaternion) -> Vector3 {
-
 	let qv = q.xyz
 	let uv = qv.cross(v)
 	let uuv = qv.cross(uv)
@@ -79,7 +78,6 @@ func -(lhs: Quaternion, rhs: Quaternion) -> Quaternion {
 }
 
 //func *(lhs: Quaternion, rhs: Quaternion) -> Quaternion {
-//
 //	return Quaternion(
 //		lhs.w * rhs.x + lhs.x * rhs.w + lhs.y * rhs.z - lhs.z * rhs.y,
 //		lhs.w * rhs.y + lhs.y * rhs.w + lhs.z * rhs.x - lhs.x * rhs.z,
