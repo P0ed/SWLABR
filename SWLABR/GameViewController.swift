@@ -17,41 +17,26 @@ final class GameViewController: NSViewController, SCNSceneRendererDelegate {
 	private let timeStep: Double = 1.0 / 60.0
 
     override func awakeFromNib() {
-        // create a new scene
-        let scene = SCNScene()
-		scene.physicsWorld.gravity = SCNVector3Zero
-		scene.background.contents = [
-			"skybox_right1",
-			"skybox_left2",
-			"skybox_top3",
-			"skybox_bottom4",
-			"skybox_front5",
-			"skybox_back6"
-		]
-
-        cameraNode = SCNNode()
-        cameraNode.camera = SCNCamera()
-        scene.rootNode.addChildNode(cameraNode)
-
-        let ambientLightNode = SCNNode()
-        ambientLightNode.light = SCNLight()
-        ambientLightNode.light!.type = SCNLightTypeAmbient
-        ambientLightNode.light!.color = NSColor.darkGrayColor()
-        scene.rootNode.addChildNode(ambientLightNode)
-
-        shipNode = createShip()
-		scene.rootNode.addChildNode(shipNode)
-		let attrs = ShipAttributes.fighterAttributes()
-		shipActor = ShipActor(attributes: attrs, node: shipNode)
-
-        gameView.scene = scene
-//        gameView.allowsCameraControl = true
+        gameView.scene = createScene()
         gameView.showsStatistics = true
 		gameView.delegate = self
 		gameView.playing = true
 		gameView.loops = true
+		gameView.antialiasingMode = .None
 
-		updateCamera(cameraNode, ship: shipNode.presentationNode)
+		let rootNode = gameView.scene!.rootNode
+
+		shipNode = createShip()
+		shipNode.position = SCNVector3(0, 0, 1)
+		rootNode.addChildNode(shipNode)
+		let attrs = ShipAttributes.fighterAttributes()
+		shipActor = ShipActor(attributes: attrs, node: shipNode)
+
+		cameraNode = SCNNode()
+		cameraNode.camera = SCNCamera()
+		shipNode.addChildNode(cameraNode)
+		cameraNode.transform = CATransform3DMakeTranslation(0, 0.4, 1.6)
+
 		setupDeviceObservers()
     }
 
@@ -68,7 +53,7 @@ final class GameViewController: NSViewController, SCNSceneRendererDelegate {
 	}
 
 	func renderer(renderer: SCNSceneRenderer, didSimulatePhysicsAtTime time: NSTimeInterval) {
-		updateCamera(cameraNode, ship: shipNode.presentationNode)
+//		print(shipNode.presentationNode.position)
 	}
 
 	func fixedTimeStepUpdate() {
@@ -76,6 +61,27 @@ final class GameViewController: NSViewController, SCNSceneRendererDelegate {
 		input.throttle = eventsController.leftJoystick.dy
 		input.stick = StickInput(x: eventsController.rightJoystick.dx, y: eventsController.rightJoystick.dy)
 		shipActor.update(input)
+	}
+
+	func createScene() -> SCNScene {
+		let scene = SCNScene()
+		scene.physicsWorld.gravity = SCNVector3Zero
+		scene.background.contents = [
+			"skybox_right1",
+			"skybox_left2",
+			"skybox_top3",
+			"skybox_bottom4",
+			"skybox_front5",
+			"skybox_back6"
+		]
+
+		let ambientLightNode = SCNNode()
+		ambientLightNode.light = SCNLight()
+		ambientLightNode.light!.type = SCNLightTypeAmbient
+		ambientLightNode.light!.color = NSColor.darkGrayColor()
+		scene.rootNode.addChildNode(ambientLightNode)
+
+		return scene
 	}
 
 	func createShip() -> SCNNode {
@@ -86,34 +92,11 @@ final class GameViewController: NSViewController, SCNSceneRendererDelegate {
 		let node = SCNNode(geometry: shipGeometry)
 		let physicsBody = SCNPhysicsBody.dynamicBody()
 		physicsBody.physicsShape = SCNPhysicsShape(geometry: shipGeometry, options: nil)
+		physicsBody.angularDamping = 0.9
+		physicsBody.damping = 0.4
 		node.physicsBody = physicsBody
 
 		return node
-	}
-
-	func updateCamera(camera: SCNNode, ship: SCNNode) {
-		let cameraDistance = 2.0
-		let cameraDamping = 0.3
-
-		let shipPos = gameView.scene!.rootNode.convertPosition(ship.position, toNode: nil).vector3
-		let shipOrt = ship.orientation.vector4
-
-		print(shipPos)
-
-		let ortDamping = double4(cameraDamping, cameraDamping, cameraDamping, cameraDamping)
-//		let posDamping = double3(cameraDamping, cameraDamping, cameraDamping)
-
-		let targetPos = double3(
-			shipPos.x + cameraDistance * shipOrt.y * shipOrt.y,
-			shipPos.y + cameraDistance * shipOrt.z * shipOrt.z + 0.5,
-			shipPos.z + cameraDistance * shipOrt.w * shipOrt.w
-		)
-
-		let newOrt = vector_mix(camera.orientation.vector4, shipOrt, ortDamping)
-//		let newPos = vector_mix(camera.position.vector3, targetPos, posDamping)
-
-		camera.orientation = SCNQuaternion(newOrt)
-		camera.position = SCNVector3(targetPos)
 	}
 
 	func setupDeviceObservers() {
@@ -133,22 +116,6 @@ final class GameViewController: NSViewController, SCNSceneRendererDelegate {
 		notificationCenter.addObserverForName(didRemoveDeviceKey, object: nil, queue: NSOperationQueue.mainQueue()) { note in
 			let deviceHandler = note.userInfo![OEDeviceManagerDeviceHandlerUserInfoKey] as! OEDeviceHandler
 			self.eventMonitors.removeValueForKey(deviceHandler.deviceIdentifier)
-		}
-	}
-}
-
-extension SCNVector3 {
-	var vector3: double3 {
-		get {
-			return double3(Double(x), Double(y), Double(z))
-		}
-	}
-}
-
-extension SCNVector4 {
-	var vector4: double4 {
-		get {
-			return double4(Double(x), Double(y), Double(z), Double(w))
 		}
 	}
 }

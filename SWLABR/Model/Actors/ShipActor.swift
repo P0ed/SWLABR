@@ -33,28 +33,23 @@ class ShipActor: Actor {
 		}
 		thrusters = min(max(thrusters + 0.02 * input.throttle, 0), 1)
 
-		if let physicsBody = node.physicsBody {
+		let physicsBody = node.physicsBody!
+		let presentationNode = node.presentationNode
+		let orientation = presentationNode.orientation
 
-			let fwd = CGFloat(thrusters * attributes.topSpeed * -0.001)
-			let xRot = CGFloat(input.stick.x * attributes.turnRate)
-			let yRot = CGFloat(input.stick.y * attributes.turnRate)
+		let fwd = CGFloat(thrusters * attributes.topSpeed * 0.01)
+		let xRot = CGFloat(input.stick.x * attributes.turnRate * -0.01)
+		let yRot = CGFloat(input.stick.y * attributes.turnRate * -0.01)
 
-			let orientation = node.orientation
+		if fwd > 0 {
+			let force = Vector3(0.0, 0.0, -fwd) * orientation
+			physicsBody.applyForce(force, impulse: false)
+		}
 
-			let force = SCNVector3(
-				x: fwd * orientation.y,
-				y: fwd * orientation.z,
-				z: fwd * orientation.w
-			)
-
-			physicsBody.applyForce(force, impulse: true)
-
-//			node.rotation = SCNVector4(
-//				x: xRot * 0.01,
-//				y: yRot * 0.01,
-//				z: 0.0,
-//				w: 1.0
-//			)
+		if abs(xRot) > 0 || abs(yRot) > 0 {
+			let axis = Vector3(yRot, 0.0, xRot) * orientation
+			let torque = Vector4(xyz: axis, w: 0.5)
+			physicsBody.applyTorque(torque, impulse: false)
 		}
 	}
 

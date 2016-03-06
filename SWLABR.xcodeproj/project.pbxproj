@@ -37,6 +37,7 @@
 		5FF22FD61C8B6D1100EF9E97 /* DeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FD11C8B6D1100EF9E97 /* DeviceConfiguration.swift */; };
 		5FF22FD71C8B6D1100EF9E97 /* DSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FD21C8B6D1100EF9E97 /* DSExtensions.swift */; };
 		5FF22FD81C8B6D1100EF9E97 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FD31C8B6D1100EF9E97 /* EventsController.swift */; };
+		5FF22FDB1C8C5CFF00EF9E97 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FDA1C8C5CFF00EF9E97 /* Math.swift */; };
 		D6F166651C7C587F00692ED4 /* SpriteKitUI.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F166641C7C587F00692ED4 /* SpriteKitUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6F166691C7C587F00692ED4 /* SpriteKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */; };
 		D6F1666A1C7C587F00692ED4 /* SpriteKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -100,6 +101,7 @@
 		5FF22FD11C8B6D1100EF9E97 /* DeviceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceConfiguration.swift; sourceTree = "<group>"; };
 		5FF22FD21C8B6D1100EF9E97 /* DSExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSExtensions.swift; sourceTree = "<group>"; };
 		5FF22FD31C8B6D1100EF9E97 /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
+		5FF22FDA1C8C5CFF00EF9E97 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F166641C7C587F00692ED4 /* SpriteKitUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteKitUI.h; sourceTree = "<group>"; };
 		D6F166661C7C587F00692ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		5F9E31951C72649100BE2995 /* SWLABR */ = {
 			isa = PBXGroup;
 			children = (
+				5FF22FD91C8C5CF800EF9E97 /* Math */,
 				5FF22FCE1C8B6D1100EF9E97 /* GamepadKit */,
 				5FF22FBA1C8B10AF00EF9E97 /* Model */,
 				5FF22FB91C8B108E00EF9E97 /* SpaceScene */,
@@ -264,6 +267,14 @@
 				5FF22FD31C8B6D1100EF9E97 /* EventsController.swift */,
 			);
 			path = GamepadKit;
+			sourceTree = "<group>";
+		};
+		5FF22FD91C8C5CF800EF9E97 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				5FF22FDA1C8C5CFF00EF9E97 /* Math.swift */,
+			);
+			path = Math;
 			sourceTree = "<group>";
 		};
 		D6F166631C7C587F00692ED4 /* SpriteKitUI */ = {
@@ -420,6 +431,7 @@
 				5F9E31971C72649100BE2995 /* AppDelegate.swift in Sources */,
 				5FF22FCD1C8B56FB00EF9E97 /* ShipAttributes.swift in Sources */,
 				5FF22FC21C8B116900EF9E97 /* Actor.swift in Sources */,
+				5FF22FDB1C8C5CFF00EF9E97 /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
