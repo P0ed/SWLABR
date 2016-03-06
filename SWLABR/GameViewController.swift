@@ -9,6 +9,7 @@ final class GameViewController: NSViewController, SCNSceneRendererDelegate {
 	private var shipActor: ShipActor!
 	private var shipNode: SCNNode!
 	private var cameraNode: SCNNode!
+	private var particles: SCNParticleSystem!
 
 	private let eventsController = EventsController()
 	private var eventMonitors = [UInt: AnyObject]()
@@ -37,6 +38,11 @@ final class GameViewController: NSViewController, SCNSceneRendererDelegate {
 		shipNode.addChildNode(cameraNode)
 		cameraNode.transform = CATransform3DMakeTranslation(0, 0.4, 1.6)
 
+		particles = SCNParticleSystem(named: "StarsParticleSystem", inDirectory: "art.scnassets/SpaceParticles")
+		particles.particleLifeSpan = 0.6
+		particles.birthRate = 128
+		shipNode.addParticleSystem(particles)
+
 		setupDeviceObservers()
     }
 
@@ -53,7 +59,11 @@ final class GameViewController: NSViewController, SCNSceneRendererDelegate {
 	}
 
 	func renderer(renderer: SCNSceneRenderer, didSimulatePhysicsAtTime time: NSTimeInterval) {
-//		print(shipNode.presentationNode.position)
+
+		let body = shipNode.physicsBody!
+		let velocity = body.velocity
+		particles.emittingDirection = -velocity * -shipNode.presentationNode.orientation
+		particles.speedFactor = velocity.length / 10.0
 	}
 
 	func fixedTimeStepUpdate() {

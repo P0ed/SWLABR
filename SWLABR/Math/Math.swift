@@ -29,6 +29,10 @@ extension Vector4 {
 
 extension Vector3 {
 
+	var length: Scalar {
+		get { return x * x + y * y + z * z }
+	}
+
 	func cross(v: Vector3) -> Vector3 {
 		return Vector3(y * v.z - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x)
 	}
