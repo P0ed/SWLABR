@@ -1,4 +1,5 @@
 import SceneKit
+import SpriteKit
 
 final class GameEngine {
 
@@ -26,6 +27,8 @@ final class GameEngine {
 
 		spaceParticles = SpaceSceneFabric.createSpaceParticles()
 		shipNode.addParticleSystem(spaceParticles)
+
+		spawnEnemy()
 	}
 
 	func update(time: NSTimeInterval, input: ShipInput) {
@@ -48,5 +51,12 @@ final class GameEngine {
 		let velocity = body.velocity
 		spaceParticles.emittingDirection = -velocity * -shipActor.node.presentationNode.orientation
 		spaceParticles.speedFactor = velocity.length / 10.0
+	}
+
+	func spawnEnemy() {
+		let ship = SpaceSceneFabric.createShip()
+		ship.geometry?.materials.first?.diffuse.contents = SKColor(red: 0.1, green: 0.3, blue: 0.8, alpha: 1.0)
+		ship.position = Vector3(0, 0, 10)
+		scene.rootNode.addChildNode(ship)
 	}
 }

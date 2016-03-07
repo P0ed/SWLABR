@@ -50,10 +50,19 @@ final class SpaceSceneFabric {
 	}
 
 	static func createBlasterNode() -> SCNNode {
-		let geometry = SCNBox(width: 0.1, height: 0.1, length: 0.8, chamferRadius: 0.0)
+		let geometry = SCNBox(width: 0.08, height: 0.08, length: 0.8, chamferRadius: 0.0)
 		let material = SCNMaterial()
 		material.diffuse.contents = SKColor(red: 0.1, green: 0.8, blue: 0.4, alpha: 1.0)
+
+		let physicsBody = SCNPhysicsBody.dynamicBody()
+		physicsBody.physicsShape = SCNPhysicsShape(geometry: geometry, options: nil)
+		physicsBody.mass = 0.01
+		physicsBody.damping = 0.0
+		physicsBody.angularDamping = 0.0
+
 		let node = SCNNode(geometry: geometry)
+		node.geometry?.materials = [material]
+		node.physicsBody = physicsBody
 		return node
 	}
 }

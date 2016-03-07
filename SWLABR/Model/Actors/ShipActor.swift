@@ -11,6 +11,8 @@ final class ShipActor: Actor {
 	var energy: Double
 	var thrusters: Double
 
+	var blasterCD: Double = 0.0
+
 	init(attributes: ShipAttributes, node: SCNNode) {
 
 		self.attributes = attributes
@@ -24,10 +26,11 @@ final class ShipActor: Actor {
 
 	func update(input: ShipInput) {
 		updateControls(input)
+		updateWeapons(input)
 		updateStats()
 	}
 
-	func updateControls(input: ShipInput) {
+	private func updateControls(input: ShipInput) {
 		if thrusters > 0.7 {
 			thrusters -= 0.01
 		}
@@ -53,7 +56,37 @@ final class ShipActor: Actor {
 		}
 	}
 
-	func updateStats() {
+	private func updateWeapons(input: ShipInput) {
+		if input.fireBlaster && blasterCD == 0.0 {
+			fireBlaster()
+		}
+		updateCD()
+	}
+
+	private func fireBlaster() {
+		let blasterNode = SpaceSceneFabric.createBlasterNode()
+
+		let presentationNode = node.presentationNode
+		let orientation = presentationNode.orientation
+
+		blasterNode.position = presentationNode.position + Vector3(0, 0, -2) * orientation
+		blasterNode.orientation = node.presentationNode.orientation
+		blasterNode.physicsBody?.velocity = Vector3(0, 0, -20) * orientation
+		node.parentNode?.addChildNode(blasterNode)
+
+		let time = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 3))
+		dispatch_after(time, dispatch_get_main_queue()) {
+			blasterNode.removeFromParentNode()
+		}
+
+		blasterCD = 0.2
+	}
+
+	private func updateCD() {
+		blasterCD = max(blasterCD - 1.0 / 60.0, 0.0)
+	}
+
+	private func updateStats() {
 
 		let thrustCost = thrusters < 0.7 ? thrusters * 0.1 : thrusters * 0.2
 		if (energy > thrustCost) {
