@@ -1,6 +1,11 @@
 import SceneKit
 
-class GameView: SCNView {
+final class GameView: SCNView {
+
+	func updateDrawableSize() {
+		let layer = self.layer! as! CAMetalLayer
+		layer.drawableSize = bounds.size
+	}
 
     override func mouseDown(theEvent: NSEvent) {
         /* Called when a mouse click occurs */

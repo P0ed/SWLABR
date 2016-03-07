@@ -1,7 +1,7 @@
 import Foundation
 import SceneKit
 
-class ShipActor: Actor {
+final class ShipActor: Actor {
 
 	let attributes: ShipAttributes
 	let node: SCNNode

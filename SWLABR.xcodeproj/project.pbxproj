@@ -41,6 +41,7 @@
 		5FF22FE11C8CA37100EF9E97 /* HIDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FE01C8CA37100EF9E97 /* HIDController.swift */; };
 		5FF22FE31C8CA7CC00EF9E97 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FE21C8CA7CC00EF9E97 /* InputController.swift */; };
 		5FF22FE51C8CAAF700EF9E97 /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FE41C8CAAF700EF9E97 /* SpaceScene.swift */; };
+		5FF22FE71C8DA37000EF9E97 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FE61C8DA37000EF9E97 /* GameEngine.swift */; };
 		D6F166651C7C587F00692ED4 /* SpriteKitUI.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F166641C7C587F00692ED4 /* SpriteKitUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6F166691C7C587F00692ED4 /* SpriteKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */; };
 		D6F1666A1C7C587F00692ED4 /* SpriteKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -108,6 +109,7 @@
 		5FF22FE01C8CA37100EF9E97 /* HIDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDController.swift; sourceTree = "<group>"; };
 		5FF22FE21C8CA7CC00EF9E97 /* InputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
 		5FF22FE41C8CAAF700EF9E97 /* SpaceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
+		5FF22FE61C8DA37000EF9E97 /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		D6F166621C7C587F00692ED4 /* SpriteKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F166641C7C587F00692ED4 /* SpriteKitUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteKitUI.h; sourceTree = "<group>"; };
 		D6F166661C7C587F00692ED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				5FF22FE41C8CAAF700EF9E97 /* SpaceScene.swift */,
 				5FF22FE21C8CA7CC00EF9E97 /* InputController.swift */,
+				5FF22FE61C8DA37000EF9E97 /* GameEngine.swift */,
 			);
 			path = SpaceScene;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				5FF22FD51C8B6D1100EF9E97 /* DeviceAction.swift in Sources */,
 				5F9E319B1C72649100BE2995 /* GameViewController.swift in Sources */,
 				5F9E31971C72649100BE2995 /* AppDelegate.swift in Sources */,
+				5FF22FE71C8DA37000EF9E97 /* GameEngine.swift in Sources */,
 				5FF22FE51C8CAAF700EF9E97 /* SpaceScene.swift in Sources */,
 				5FF22FCD1C8B56FB00EF9E97 /* ShipAttributes.swift in Sources */,
 				5FF22FC21C8B116900EF9E97 /* Actor.swift in Sources */,

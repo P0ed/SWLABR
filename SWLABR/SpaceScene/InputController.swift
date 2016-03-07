@@ -1,6 +1,6 @@
 import Foundation
 
-class InputController {
+final class InputController {
 
 	let eventsController: EventsController
 
