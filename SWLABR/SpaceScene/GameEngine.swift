@@ -23,7 +23,8 @@ final class GameEngine {
 		cameraNode = SCNNode()
 		cameraNode.camera = SCNCamera()
 		shipNode.addChildNode(cameraNode)
-		cameraNode.transform = CATransform3DMakeTranslation(0, 0.4, 1.6)
+		cameraNode.position = Vector3(0.0, 0.6, 1.6)
+		cameraNode.eulerAngles = Vector3(-0.16, 0.0, 0.0)
 
 		spaceParticles = SpaceSceneFabric.createSpaceParticles()
 		shipNode.addParticleSystem(spaceParticles)

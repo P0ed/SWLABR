@@ -41,16 +41,17 @@ final class ShipActor: Actor {
 		let orientation = presentationNode.orientation
 
 		let fwd = CGFloat(thrusters * attributes.topSpeed * 0.01)
-		let xRot = CGFloat(input.stick.x * attributes.turnRate * -0.01)
-		let yRot = CGFloat(input.stick.y * attributes.turnRate * -0.01)
+		let yaw = CGFloat(input.yaw * attributes.turnRate * 0.4 * 0.01)
+		let roll = CGFloat(input.stick.x * attributes.turnRate * 0.01)
+		let pitch = CGFloat(input.stick.y * attributes.turnRate * 0.01)
 
 		if fwd > 0 {
 			let force = Vector3(0.0, 0.0, -fwd) * orientation
 			physicsBody.applyForce(force, impulse: false)
 		}
 
-		if abs(xRot) > 0 || abs(yRot) > 0 {
-			let axis = Vector3(yRot, 0.0, xRot) * orientation
+		if abs(roll) > 0 || abs(pitch) > 0 || abs(yaw) > 0 {
+			let axis = Vector3(-pitch, -yaw, -roll) * orientation
 			let torque = Vector4(xyz: axis, w: 0.5)
 			physicsBody.applyTorque(torque, impulse: false)
 		}
