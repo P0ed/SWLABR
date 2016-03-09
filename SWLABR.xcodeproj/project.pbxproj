@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5F1A42331C8F0E9700369F5E /* SWLABR.md in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A42321C8F0E9700369F5E /* SWLABR.md */; };
+		5F1A42351C90ABC000369F5E /* EntityNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A42341C90ABC000369F5E /* EntityNode.swift */; };
+		5F1A423A1C90BD8600369F5E /* InputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A42381C90B0EA00369F5E /* InputComponent.swift */; };
+		5F1A423C1C90BD9000369F5E /* ShipBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A42361C90B08100369F5E /* ShipBehavior.swift */; };
 		5F33722A1C80F68500684F63 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26D1C7C69D300D06459 /* RxCocoa.framework */; };
 		5F33722B1C80F68500684F63 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26B1C7C69D300D06459 /* RxBlocking.framework */; };
 		5F33722C1C80F68500684F63 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26F1C7C69D300D06459 /* RxSwift.framework */; };
@@ -29,8 +32,6 @@
 		5F9E31A21C72649100BE2995 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9E31A01C72649100BE2995 /* MainMenu.xib */; };
 		5FA295A11C81F71E00FBB0B8 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA2959E1C81F71E00FBB0B8 /* art.scnassets */; };
 		5FA295A21C81F71E00FBB0B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA2959F1C81F71E00FBB0B8 /* Assets.xcassets */; };
-		5FF22FC21C8B116900EF9E97 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FC01C8B116900EF9E97 /* Actor.swift */; };
-		5FF22FC31C8B116900EF9E97 /* ShipActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FC11C8B116900EF9E97 /* ShipActor.swift */; };
 		5FF22FCA1C8B56D200EF9E97 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FC91C8B56D200EF9E97 /* Input.swift */; };
 		5FF22FCD1C8B56FB00EF9E97 /* ShipAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF22FCC1C8B56FB00EF9E97 /* ShipAttributes.swift */; };
 		5FF22FD41C8B6D1100EF9E97 /* Controller-Database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FF22FCF1C8B6D1100EF9E97 /* Controller-Database.plist */; };
@@ -83,6 +84,9 @@
 
 /* Begin PBXFileReference section */
 		5F1A42321C8F0E9700369F5E /* SWLABR.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SWLABR.md; sourceTree = "<group>"; };
+		5F1A42341C90ABC000369F5E /* EntityNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityNode.swift; sourceTree = "<group>"; };
+		5F1A42361C90B08100369F5E /* ShipBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipBehavior.swift; sourceTree = "<group>"; };
+		5F1A42381C90B0EA00369F5E /* InputComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputComponent.swift; sourceTree = "<group>"; };
 		5F4ED2611C7C672200D06459 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
 		5F4ED2631C7C68C400D06459 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5F4ED2671C7C69D300D06459 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = "<group>"; };
@@ -98,8 +102,6 @@
 		5F9E31A31C72649100BE2995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA2959E1C81F71E00FBB0B8 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		5FA2959F1C81F71E00FBB0B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5FF22FC01C8B116900EF9E97 /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
-		5FF22FC11C8B116900EF9E97 /* ShipActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipActor.swift; sourceTree = "<group>"; };
 		5FF22FC91C8B56D200EF9E97 /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		5FF22FCC1C8B56FB00EF9E97 /* ShipAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipAttributes.swift; sourceTree = "<group>"; };
 		5FF22FCF1C8B6D1100EF9E97 /* Controller-Database.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Controller-Database.plist"; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				5FF22FE41C8CAAF700EF9E97 /* SpaceScene.swift */,
 				5FF22FE21C8CA7CC00EF9E97 /* InputController.swift */,
 				5FF22FE61C8DA37000EF9E97 /* GameEngine.swift */,
+				5F1A42341C90ABC000369F5E /* EntityNode.swift */,
 			);
 			path = SpaceScene;
 			sourceTree = "<group>";
@@ -241,18 +244,18 @@
 			children = (
 				5FF22FCB1C8B56EA00EF9E97 /* ShipAttributes */,
 				5FF22FC81C8B56C800EF9E97 /* Input */,
-				5FF22FBF1C8B115E00EF9E97 /* Actors */,
+				5FF22FBF1C8B115E00EF9E97 /* Components */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5FF22FBF1C8B115E00EF9E97 /* Actors */ = {
+		5FF22FBF1C8B115E00EF9E97 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5FF22FC01C8B116900EF9E97 /* Actor.swift */,
-				5FF22FC11C8B116900EF9E97 /* ShipActor.swift */,
+				5F1A42361C90B08100369F5E /* ShipBehavior.swift */,
+				5F1A42381C90B0EA00369F5E /* InputComponent.swift */,
 			);
-			path = Actors;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		5FF22FC81C8B56C800EF9E97 /* Input */ = {
@@ -436,9 +439,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FF22FCA1C8B56D200EF9E97 /* Input.swift in Sources */,
-				5FF22FC31C8B116900EF9E97 /* ShipActor.swift in Sources */,
 				5FF22FE31C8CA7CC00EF9E97 /* InputController.swift in Sources */,
 				5FF22FD71C8B6D1100EF9E97 /* DSExtensions.swift in Sources */,
+				5F1A42351C90ABC000369F5E /* EntityNode.swift in Sources */,
+				5F1A423A1C90BD8600369F5E /* InputComponent.swift in Sources */,
 				5FF22FD61C8B6D1100EF9E97 /* DeviceConfiguration.swift in Sources */,
 				5FF22FE11C8CA37100EF9E97 /* HIDController.swift in Sources */,
 				5F9E31991C72649100BE2995 /* GameView.swift in Sources */,
@@ -446,11 +450,11 @@
 				5FF22FD51C8B6D1100EF9E97 /* DeviceAction.swift in Sources */,
 				5F1A42331C8F0E9700369F5E /* SWLABR.md in Sources */,
 				5F9E319B1C72649100BE2995 /* GameViewController.swift in Sources */,
+				5F1A423C1C90BD9000369F5E /* ShipBehavior.swift in Sources */,
 				5F9E31971C72649100BE2995 /* AppDelegate.swift in Sources */,
 				5FF22FE71C8DA37000EF9E97 /* GameEngine.swift in Sources */,
 				5FF22FE51C8CAAF700EF9E97 /* SpaceScene.swift in Sources */,
 				5FF22FCD1C8B56FB00EF9E97 /* ShipAttributes.swift in Sources */,
-				5FF22FC21C8B116900EF9E97 /* Actor.swift in Sources */,
 				5FF22FDB1C8C5CFF00EF9E97 /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

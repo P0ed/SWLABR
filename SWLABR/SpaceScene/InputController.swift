@@ -42,8 +42,8 @@ final class InputController {
 	func currentInput() -> ShipInput {
 		var input = ShipInput()
 		input.throttle = eventsController.leftJoystick.dy
-		input.yaw = eventsController.leftJoystick.dx
-		input.stick = StickInput(x: eventsController.rightJoystick.dx, y: eventsController.rightJoystick.dy)
+		input.rudder = eventsController.leftJoystick.dx
+		input.stick = eventsController.rightJoystick
 		input.fireTorpedo = buttonPressed(.L2)
 		input.fireBlaster = buttonPressed(.R2)
 

@@ -17,8 +17,8 @@ extension ShipAttributes {
 			armor: 200,
 			shield: 320,
 			energy: 480,
-			topSpeed: 180,
-			turnRate: 40
+			topSpeed: 280,
+			turnRate: 58
 		)
 	}
 }
