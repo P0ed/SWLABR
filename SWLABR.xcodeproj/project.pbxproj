@@ -11,6 +11,27 @@
 		5F1A42351C90ABC000369F5E /* EntityNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A42341C90ABC000369F5E /* EntityNode.swift */; };
 		5F1A423A1C90BD8600369F5E /* InputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A42381C90B0EA00369F5E /* InputComponent.swift */; };
 		5F1A423C1C90BD9000369F5E /* ShipBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A42361C90B08100369F5E /* ShipBehavior.swift */; };
+		5F1A425E1C9449B300369F5E /* battle.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42481C9449B300369F5E /* battle.ogg */; };
+		5F1A425F1C9449B400369F5E /* orbit1.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42491C9449B300369F5E /* orbit1.ogg */; };
+		5F1A42601C9449B400369F5E /* orbit2.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A424A1C9449B300369F5E /* orbit2.ogg */; };
+		5F1A42611C9449B400369F5E /* orbit3.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A424B1C9449B300369F5E /* orbit3.ogg */; };
+		5F1A42621C9449B400369F5E /* orbit4.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A424C1C9449B300369F5E /* orbit4.ogg */; };
+		5F1A42631C9449B400369F5E /* orbit5.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A424D1C9449B300369F5E /* orbit5.ogg */; };
+		5F1A42641C9449B400369F5E /* outfit.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A424E1C9449B300369F5E /* outfit.ogg */; };
+		5F1A42651C9449B400369F5E /* space.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A424F1C9449B300369F5E /* space.ogg */; };
+		5F1A42661C9449B400369F5E /* boom1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42511C9449B300369F5E /* boom1.wav */; };
+		5F1A42671C9449B400369F5E /* boom23.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42521C9449B300369F5E /* boom23.wav */; };
+		5F1A42681C9449B400369F5E /* boom45.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42531C9449B300369F5E /* boom45.wav */; };
+		5F1A42691C9449B400369F5E /* boom67.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42541C9449B300369F5E /* boom67.wav */; };
+		5F1A426A1C9449B400369F5E /* flagship_p.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42551C9449B300369F5E /* flagship_p.wav */; };
+		5F1A426B1C9449B400369F5E /* human_p.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42561C9449B300369F5E /* human_p.wav */; };
+		5F1A426C1C9449B400369F5E /* human_s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42571C9449B300369F5E /* human_s.wav */; };
+		5F1A426D1C9449B400369F5E /* mauler_p.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42581C9449B300369F5E /* mauler_p.wav */; };
+		5F1A426E1C9449B400369F5E /* menusnd01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A42591C9449B300369F5E /* menusnd01.wav */; };
+		5F1A426F1C9449B400369F5E /* menusnd02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A425A1C9449B300369F5E /* menusnd02.wav */; };
+		5F1A42701C9449B400369F5E /* shipdies.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A425B1C9449B300369F5E /* shipdies.wav */; };
+		5F1A42711C9449B400369F5E /* syreen_p.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A425C1C9449B300369F5E /* syreen_p.wav */; };
+		5F1A42721C9449B400369F5E /* urquan_p.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A425D1C9449B300369F5E /* urquan_p.wav */; };
 		5F33722A1C80F68500684F63 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26D1C7C69D300D06459 /* RxCocoa.framework */; };
 		5F33722B1C80F68500684F63 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26B1C7C69D300D06459 /* RxBlocking.framework */; };
 		5F33722C1C80F68500684F63 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4ED26F1C7C69D300D06459 /* RxSwift.framework */; };
@@ -87,6 +108,27 @@
 		5F1A42341C90ABC000369F5E /* EntityNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityNode.swift; sourceTree = "<group>"; };
 		5F1A42361C90B08100369F5E /* ShipBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipBehavior.swift; sourceTree = "<group>"; };
 		5F1A42381C90B0EA00369F5E /* InputComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputComponent.swift; sourceTree = "<group>"; };
+		5F1A42481C9449B300369F5E /* battle.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = battle.ogg; sourceTree = "<group>"; };
+		5F1A42491C9449B300369F5E /* orbit1.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = orbit1.ogg; sourceTree = "<group>"; };
+		5F1A424A1C9449B300369F5E /* orbit2.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = orbit2.ogg; sourceTree = "<group>"; };
+		5F1A424B1C9449B300369F5E /* orbit3.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = orbit3.ogg; sourceTree = "<group>"; };
+		5F1A424C1C9449B300369F5E /* orbit4.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = orbit4.ogg; sourceTree = "<group>"; };
+		5F1A424D1C9449B300369F5E /* orbit5.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = orbit5.ogg; sourceTree = "<group>"; };
+		5F1A424E1C9449B300369F5E /* outfit.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = outfit.ogg; sourceTree = "<group>"; };
+		5F1A424F1C9449B300369F5E /* space.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = space.ogg; sourceTree = "<group>"; };
+		5F1A42511C9449B300369F5E /* boom1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom1.wav; sourceTree = "<group>"; };
+		5F1A42521C9449B300369F5E /* boom23.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom23.wav; sourceTree = "<group>"; };
+		5F1A42531C9449B300369F5E /* boom45.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom45.wav; sourceTree = "<group>"; };
+		5F1A42541C9449B300369F5E /* boom67.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom67.wav; sourceTree = "<group>"; };
+		5F1A42551C9449B300369F5E /* flagship_p.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flagship_p.wav; sourceTree = "<group>"; };
+		5F1A42561C9449B300369F5E /* human_p.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = human_p.wav; sourceTree = "<group>"; };
+		5F1A42571C9449B300369F5E /* human_s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = human_s.wav; sourceTree = "<group>"; };
+		5F1A42581C9449B300369F5E /* mauler_p.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mauler_p.wav; sourceTree = "<group>"; };
+		5F1A42591C9449B300369F5E /* menusnd01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = menusnd01.wav; sourceTree = "<group>"; };
+		5F1A425A1C9449B300369F5E /* menusnd02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = menusnd02.wav; sourceTree = "<group>"; };
+		5F1A425B1C9449B300369F5E /* shipdies.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shipdies.wav; sourceTree = "<group>"; };
+		5F1A425C1C9449B300369F5E /* syreen_p.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = syreen_p.wav; sourceTree = "<group>"; };
+		5F1A425D1C9449B300369F5E /* urquan_p.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = urquan_p.wav; sourceTree = "<group>"; };
 		5F4ED2611C7C672200D06459 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
 		5F4ED2631C7C68C400D06459 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5F4ED2671C7C69D300D06459 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = "<group>"; };
@@ -152,6 +194,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F1A42471C9449B300369F5E /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				5F1A42481C9449B300369F5E /* battle.ogg */,
+				5F1A42491C9449B300369F5E /* orbit1.ogg */,
+				5F1A424A1C9449B300369F5E /* orbit2.ogg */,
+				5F1A424B1C9449B300369F5E /* orbit3.ogg */,
+				5F1A424C1C9449B300369F5E /* orbit4.ogg */,
+				5F1A424D1C9449B300369F5E /* orbit5.ogg */,
+				5F1A424E1C9449B300369F5E /* outfit.ogg */,
+				5F1A424F1C9449B300369F5E /* space.ogg */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		5F1A42501C9449B300369F5E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5F1A42511C9449B300369F5E /* boom1.wav */,
+				5F1A42521C9449B300369F5E /* boom23.wav */,
+				5F1A42531C9449B300369F5E /* boom45.wav */,
+				5F1A42541C9449B300369F5E /* boom67.wav */,
+				5F1A42551C9449B300369F5E /* flagship_p.wav */,
+				5F1A42561C9449B300369F5E /* human_p.wav */,
+				5F1A42571C9449B300369F5E /* human_s.wav */,
+				5F1A42581C9449B300369F5E /* mauler_p.wav */,
+				5F1A42591C9449B300369F5E /* menusnd01.wav */,
+				5F1A425A1C9449B300369F5E /* menusnd02.wav */,
+				5F1A425B1C9449B300369F5E /* shipdies.wav */,
+				5F1A425C1C9449B300369F5E /* syreen_p.wav */,
+				5F1A425D1C9449B300369F5E /* urquan_p.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		5F4ED2601C7C671A00D06459 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +299,8 @@
 		5FA2959D1C81F71E00FBB0B8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5F1A42471C9449B300369F5E /* Music */,
+				5F1A42501C9449B300369F5E /* Sounds */,
 				5FA2959E1C81F71E00FBB0B8 /* art.scnassets */,
 				5FA2959F1C81F71E00FBB0B8 /* Assets.xcassets */,
 			);
@@ -417,9 +496,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F1A42691C9449B400369F5E /* boom67.wav in Resources */,
+				5F1A42681C9449B400369F5E /* boom45.wav in Resources */,
+				5F1A42611C9449B400369F5E /* orbit3.ogg in Resources */,
 				5F9E31A21C72649100BE2995 /* MainMenu.xib in Resources */,
+				5F1A42661C9449B400369F5E /* boom1.wav in Resources */,
+				5F1A42601C9449B400369F5E /* orbit2.ogg in Resources */,
+				5F1A42721C9449B400369F5E /* urquan_p.wav in Resources */,
 				5FF22FD41C8B6D1100EF9E97 /* Controller-Database.plist in Resources */,
+				5F1A426A1C9449B400369F5E /* flagship_p.wav in Resources */,
+				5F1A426E1C9449B400369F5E /* menusnd01.wav in Resources */,
+				5F1A426F1C9449B400369F5E /* menusnd02.wav in Resources */,
+				5F1A42651C9449B400369F5E /* space.ogg in Resources */,
+				5F1A42671C9449B400369F5E /* boom23.wav in Resources */,
+				5F1A42621C9449B400369F5E /* orbit4.ogg in Resources */,
+				5F1A426B1C9449B400369F5E /* human_p.wav in Resources */,
+				5F1A42641C9449B400369F5E /* outfit.ogg in Resources */,
+				5F1A426C1C9449B400369F5E /* human_s.wav in Resources */,
 				5FA295A21C81F71E00FBB0B8 /* Assets.xcassets in Resources */,
+				5F1A425E1C9449B300369F5E /* battle.ogg in Resources */,
+				5F1A425F1C9449B400369F5E /* orbit1.ogg in Resources */,
+				5F1A42701C9449B400369F5E /* shipdies.wav in Resources */,
+				5F1A426D1C9449B400369F5E /* mauler_p.wav in Resources */,
+				5F1A42711C9449B400369F5E /* syreen_p.wav in Resources */,
+				5F1A42631C9449B400369F5E /* orbit5.ogg in Resources */,
 				5FA295A11C81F71E00FBB0B8 /* art.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
