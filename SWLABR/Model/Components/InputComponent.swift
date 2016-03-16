@@ -9,7 +9,7 @@ final class InputComponent: ControlComponent {
 		self.inputController = inputController
 	}
 
-	func update(node: EntityNode) {
+	func update(node: EntityNode, inEngine engine: GameEngine) {
 		let input = inputController.currentInput()
 		let shipBehavior = node.behaviorComponent as! ShipBehavior
 

@@ -9,7 +9,7 @@ final class GameViewController: NSViewController {
 
     override func awakeFromNib() {
 
-		gameEngine = GameEngine()
+		gameEngine = GameEngine(renderer: gameView)
 
         gameView.scene = gameEngine.scene
         gameView.showsStatistics = true

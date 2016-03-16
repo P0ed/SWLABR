@@ -18,7 +18,7 @@ final class ShipBehavior: BehaviorComponent {
 		energy = attributes.energy
 	}
 
-	func update(node: EntityNode) {
+	func update(node: EntityNode, inEngine engine: GameEngine) {
 		updateStats()
 	}
 

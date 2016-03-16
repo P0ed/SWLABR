@@ -24,6 +24,13 @@ final class SpaceSceneFabric {
 		return scene
 	}
 
+	static func createWorldNode() -> EntityNode {
+		let node = EntityNode()
+		node.behaviorComponent = WorldBehavior()
+
+		return node
+	}
+
 	static func createEmptyShip() -> EntityNode {
 		let shipGeometry = SCNBox(width: 0.75, height: 0.25, length: 1, chamferRadius: 0)
 		let material = SCNMaterial()
