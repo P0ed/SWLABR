@@ -36,14 +36,14 @@ class SimpleTableViewExampleSectionedViewController
                     2.0,
                     3.0
                 ]),
-            SectionModel(model: "Second section", items: [
+            SectionModel(model: "Third section", items: [
                     1.0,
                     2.0,
                     3.0
                 ])
             ])
 
-        dataSource.cellFactory = { (tv, indexPath, element) in
+        dataSource.configureCell = { (_, tv, indexPath, element) in
             let cell = tv.dequeueReusableCellWithIdentifier("Cell")!
             cell.textLabel?.text = "\(element) @ row \(indexPath.row)"
             return cell

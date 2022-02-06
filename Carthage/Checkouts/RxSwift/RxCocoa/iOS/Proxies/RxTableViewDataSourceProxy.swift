@@ -20,11 +20,11 @@ class TableViewDataSourceNotSet
     : NSObject
     , UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        rxAbstractMethodWithMessage(dataSourceNotSet)
+        return 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        rxAbstractMethodWithMessage(dataSourceNotSet)
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -102,16 +102,16 @@ public class RxTableViewDataSourceProxy
      For more information take a look at `DelegateProxyType`.
      */
     public class func setCurrentDelegate(delegate: AnyObject?, toObject object: AnyObject) {
-        let collectionView: UITableView = castOrFatalError(object)
-        collectionView.dataSource = castOptionalOrFatalError(delegate)
+        let tableView: UITableView = castOrFatalError(object)
+        tableView.dataSource = castOptionalOrFatalError(delegate)
     }
 
     /**
      For more information take a look at `DelegateProxyType`.
      */
     public class func currentDelegateFor(object: AnyObject) -> AnyObject? {
-        let collectionView: UITableView = castOrFatalError(object)
-        return collectionView.dataSource
+        let tableView: UITableView = castOrFatalError(object)
+        return tableView.dataSource
     }
 
     /**

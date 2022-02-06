@@ -9,7 +9,7 @@ final class InputController {
 	init(_ eventsController: EventsController) {
 		self.eventsController = eventsController
 
-		let buttonAction: DSButton -> DeviceAction = {
+		let buttonAction: (Controls.Buttons) -> DeviceAction = {
 			button in
 			return DeviceAction {
 				pressed in
@@ -21,21 +21,19 @@ final class InputController {
 			}
 		}
 
-		let buttonActions: [DSButton: DeviceAction] = [
-			.Square: buttonAction(.Square),
-			.Cross: buttonAction(.Cross),
-			.L2: buttonAction(.L2),
-			.R2: buttonAction(.R2)
+		let buttonActions: [Controls.Buttons: DeviceAction] = [
+			.square: buttonAction(.square),
+			.cross: buttonAction(.cross),
+			.shiftLeft: buttonAction(.shiftLeft),
+			.shiftRight: buttonAction(.shiftRight)
 		]
 
 		eventsController.deviceConfiguration = DeviceConfiguration(
-			buttonsMapTable: buttonActions,
-			dPadMapTable: [:],
-			keyboardMapTable: [:]
+			buttonsMapTable: buttonActions
 		)
 	}
 
-	func buttonPressed(button: DSButton) -> Bool {
+	func buttonPressed(_ button: Controls.Buttons) -> Bool {
 		return buttonsState & 1 << button.rawValue != 0
 	}
 
@@ -44,8 +42,8 @@ final class InputController {
 		input.throttle = eventsController.leftJoystick.dy
 		input.rudder = eventsController.leftJoystick.dx
 		input.stick = eventsController.rightJoystick
-		input.fireTorpedo = buttonPressed(.L2)
-		input.fireBlaster = buttonPressed(.R2)
+		input.fireTorpedo = buttonPressed(.shiftLeft)
+		input.fireBlaster = buttonPressed(.shiftRight)
 
 		return input
 	}

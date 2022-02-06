@@ -44,7 +44,7 @@ final class GameEngine: NSObject, SCNSceneRendererDelegate, SCNPhysicsContactDel
 		spawnEnemy()
 	}
 
-	func renderer(renderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
+	func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
 		if self.time != 0 {
 			while time - self.time > GameEngine.timeStep {
 				self.time += GameEngine.timeStep
@@ -55,25 +55,25 @@ final class GameEngine: NSObject, SCNSceneRendererDelegate, SCNPhysicsContactDel
 		}
 	}
 
-	func renderer(renderer: SCNSceneRenderer, didSimulatePhysicsAtTime time: NSTimeInterval) {
+	func renderer(_ renderer: SCNSceneRenderer, didSimulatePhysicsAtTime time: TimeInterval) {
 		let body = shipNode.physicsBody!
 		let velocity = body.velocity
-		spaceParticles.emittingDirection = -velocity * -shipNode.presentationNode.orientation
+		spaceParticles.emittingDirection = -velocity * -shipNode.presentation.orientation
 		spaceParticles.speedFactor = velocity.length / 128.0
 	}
 
-	func physicsWorld(world: SCNPhysicsWorld, didBeginContact contact: SCNPhysicsContact) {
+	func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
 
 	}
 
 	private func fixedTimeStepUpdate() {
-		updateNode(worldNode)
+		updateNode(node: worldNode)
 		(worldNode.childNodes as! [EntityNode]).forEach(updateNode)
 	}
 
 	private func updateNode(node: EntityNode) {
-		node.controlComponent?.update(node, inEngine: self)
-		node.behaviorComponent?.update(node, inEngine: self)
+		node.controlComponent?.update(node: node, inEngine: self)
+		node.behaviorComponent?.update(node: node, inEngine: self)
 	}
 
 	func spawnEnemy() {

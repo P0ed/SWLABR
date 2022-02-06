@@ -13,5 +13,5 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 func appDelegate() -> AppDelegate {
-	return NSApplication.sharedApplication().delegate as! AppDelegate
+	return NSApplication.shared.delegate as! AppDelegate
 }

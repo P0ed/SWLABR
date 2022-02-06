@@ -41,6 +41,8 @@ static NSMutableDictionary *forwardableSelectorsPerClass = nil;
     for (unsigned int i = 0; i < numberOfBaseProtocols; ++i) {
         [selectors unionSet:[self collectSelectorsForProtocol:pSubprotocols[i]]];
     }
+    
+    free(pSubprotocols);
 
     return selectors;
 }
@@ -56,7 +58,7 @@ static NSMutableDictionary *forwardableSelectorsPerClass = nil;
 #define CLASS_HIERARCHY_MAX_DEPTH 100
 
         NSInteger  classHierarchyDepth = 0;
-        Class      targetClass         = self;
+        Class      targetClass         = NULL;
 
         for (classHierarchyDepth = 0, targetClass = self;
              classHierarchyDepth < CLASS_HIERARCHY_MAX_DEPTH && targetClass != nil;

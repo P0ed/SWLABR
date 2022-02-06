@@ -14,8 +14,8 @@ final class GameViewController: NSViewController {
         gameView.scene = gameEngine.scene
         gameView.showsStatistics = true
 		gameView.delegate = gameEngine
-		gameView.playing = true
+		gameView.isPlaying = true
 		gameView.loops = true
-		gameView.antialiasingMode = .None
+		gameView.antialiasingMode = .none
     }
 }

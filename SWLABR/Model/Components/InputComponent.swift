@@ -18,7 +18,7 @@ final class InputComponent: ControlComponent {
 		}
 		thrusters = min(max(thrusters + 0.02 * input.throttle, 0), 1)
 
-		shipBehavior.control(node,
+		shipBehavior.control(node: node,
 			fwd: thrusters * 0.02,
 			roll: input.stick.dx * 0.01,
 			pitch: input.stick.dy * 0.01,
@@ -26,7 +26,7 @@ final class InputComponent: ControlComponent {
 		)
 
 		if input.fireBlaster {
-			shipBehavior.fireBlaster(node)
+			shipBehavior.fireBlaster(node: node)
 		}
 	}
 }

@@ -23,6 +23,14 @@ final public class PublishSubject<Element>
     
     typealias DisposeKey = Bag<AnyObserver<Element>>.KeyType
     
+    /**
+     Indicates whether the subject has any observers
+     */
+    public var hasObservers: Bool {
+        _lock.lock(); defer { _lock.unlock() }
+        return _observers.count > 0
+    }
+    
     private var _lock = NSRecursiveLock()
     
     // state
@@ -35,9 +43,7 @@ final public class PublishSubject<Element>
     Indicates whether the subject has been disposed.
     */
     public var disposed: Bool {
-        get {
-            return _disposed
-        }
+        return _disposed
     }
     
     /**
@@ -53,25 +59,29 @@ final public class PublishSubject<Element>
     - parameter event: Event to send to the observers.
     */
     public func on(event: Event<Element>) {
-        _lock.lock(); defer { _lock.unlock() }
-        _synchronized_on(event)
+        _synchronized_on(event).on(event)
     }
 
-    func _synchronized_on(event: Event<E>) {
+    func _synchronized_on(event: Event<E>) -> Bag<AnyObserver<Element>> {
+        _lock.lock(); defer { _lock.unlock() }
+
         switch event {
         case .Next(_):
             if _disposed || _stopped {
-                return
+                return Bag()
             }
             
-            _observers.on(event)
+            return _observers
         case .Completed, .Error:
             if _stoppedEvent == nil {
                 _stoppedEvent = event
                 _stopped = true
-                _observers.on(event)
+                let observers = _observers
                 _observers.removeAll()
+                return observers
             }
+
+            return Bag()
         }
     }
     

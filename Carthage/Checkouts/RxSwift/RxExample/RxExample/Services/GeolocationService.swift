@@ -16,23 +16,22 @@ import CoreLocation
 class GeolocationService {
     
     static let instance = GeolocationService()
-    private (set) var autorized: Driver<Bool>
+    private (set) var authorized: Driver<Bool>
     private (set) var location: Driver<CLLocationCoordinate2D>
     
     private let locationManager = CLLocationManager()
     
     private init() {
         
-        locationManager.distanceFilter = kCLDistanceFilterNone;
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         
-        weak var weakLocationManager = self.locationManager
-        autorized = Observable.deferred {
+        authorized = Observable.deferred { [weak locationManager] in
                 let status = CLLocationManager.authorizationStatus()
-                guard let strongLocationManager = weakLocationManager else {
+                guard let locationManager = locationManager else {
                     return Observable.just(status)
                 }
-                return strongLocationManager
+                return locationManager
                     .rx_didChangeAuthorizationStatus
                     .startWith(status)
             }

@@ -7,7 +7,7 @@ final class GameView: SCNView {
 		layer.drawableSize = bounds.size
 	}
 
-    override func mouseDown(theEvent: NSEvent) {
+	override func mouseDown(with event: NSEvent) {
         /* Called when a mouse click occurs */
         
 //        // check what nodes are clicked
@@ -40,6 +40,6 @@ final class GameView: SCNView {
 //            SCNTransaction.commit()
 //        }
 
-        super.mouseDown(theEvent)
+		super.mouseDown(with: event)
     }
 }

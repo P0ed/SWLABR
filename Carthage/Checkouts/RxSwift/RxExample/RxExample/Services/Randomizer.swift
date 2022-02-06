@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias NumberSection = HashableSectionModel<String, Int>
+typealias NumberSection = AnimatableSectionModel<String, Int>
 
 let insertItems = true
 let deleteItems = true

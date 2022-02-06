@@ -4,17 +4,17 @@ class DeviceAction {
 
 	let action: (Bool) -> ()
 
-	init(_ action: (Bool) -> ()) {
+	init(_ action: @escaping (Bool) -> ()) {
 		self.action = action
 	}
 
-	func performAction(value: Bool) {
+	func performAction(_ value: Bool) {
 		action(value)
 	}
 }
 
-class PressAction: DeviceAction {
-	init(_ pressAction: () -> ()) {
+final class PressAction: DeviceAction {
+	init(_ pressAction: @escaping () -> ()) {
 		super.init {
 			if $0 { pressAction() }
 		}

@@ -17,8 +17,8 @@ final class SpaceSceneFabric {
 
 		let ambientLightNode = SCNNode()
 		ambientLightNode.light = SCNLight()
-		ambientLightNode.light!.type = SCNLightTypeAmbient
-		ambientLightNode.light!.color = NSColor.darkGrayColor()
+		ambientLightNode.light?.type = .ambient
+		ambientLightNode.light?.color = NSColor.darkGray
 		scene.rootNode.addChildNode(ambientLightNode)
 
 		return scene
@@ -40,7 +40,7 @@ final class SpaceSceneFabric {
 		let node = EntityNode()
 		node.geometry = shipGeometry
 
-		let physicsBody = SCNPhysicsBody.dynamicBody()
+		let physicsBody = SCNPhysicsBody.dynamic()
 		physicsBody.physicsShape = SCNPhysicsShape(geometry: shipGeometry, options: nil)
 		physicsBody.angularDamping = 0.9
 		physicsBody.damping = 0.4
@@ -49,7 +49,7 @@ final class SpaceSceneFabric {
 		return node
 	}
 
-	static func createPlayerShip(inputController: InputController) -> EntityNode {
+	static func createPlayerShip(_ inputController: InputController) -> EntityNode {
 		let inputComponent = InputComponent(inputController)
 		let behavior = ShipBehavior(attributes: ShipAttributes.fighterAttributes())
 
@@ -75,7 +75,7 @@ final class SpaceSceneFabric {
 		let material = SCNMaterial()
 		material.diffuse.contents = SKColor(red: 0.1, green: 0.8, blue: 0.4, alpha: 1.0)
 
-		let physicsBody = SCNPhysicsBody.dynamicBody()
+		let physicsBody = SCNPhysicsBody.dynamic()
 		physicsBody.physicsShape = SCNPhysicsShape(geometry: geometry, options: nil)
 		physicsBody.mass = 0.01
 		physicsBody.damping = 0.0

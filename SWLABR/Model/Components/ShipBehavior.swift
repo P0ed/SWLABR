@@ -24,18 +24,18 @@ final class ShipBehavior: BehaviorComponent {
 
 	func control(node: EntityNode, fwd: Double, roll: Double, pitch: Double, yaw: Double) {
 		let physicsBody = node.physicsBody!
-		let orientation = node.presentationNode.orientation
+		let orientation = node.presentation.orientation
 
 		if fwd > 0 {
 			let force = Vector3(0.0, 0.0, -fwd) * CGFloat(attributes.topSpeed) * orientation
-			physicsBody.applyForce(force, impulse: false)
+			physicsBody.applyForce(force, asImpulse: false)
 		}
 
 		if abs(roll) > 0 || abs(pitch) > 0 || abs(yaw) > 0 {
 			let turnRate = CGFloat(attributes.turnRate)
 			let axis = Vector3(-pitch, -yaw, -roll) * Vector3(turnRate, 0.4 * turnRate, turnRate) * orientation
 			let torque = Vector4(xyz: axis, w: 0.5)
-			physicsBody.applyTorque(torque, impulse: false)
+			physicsBody.applyTorque(torque, asImpulse: false)
 		}
 	}
 
@@ -44,16 +44,15 @@ final class ShipBehavior: BehaviorComponent {
 
 			let blasterNode = SpaceSceneFabric.createBlasterNode()
 
-			let presentationNode = node.presentationNode
-			let orientation = presentationNode.orientation
+			let presentation = node.presentation
+			let orientation = presentation.orientation
 
-			blasterNode.position = presentationNode.position + Vector3(0, 0, -2) * orientation
-			blasterNode.orientation = node.presentationNode.orientation
+			blasterNode.position = presentation.position + Vector3(0, 0, -2) * orientation
+			blasterNode.orientation = node.presentation.orientation
 			blasterNode.physicsBody?.velocity = Vector3(0, 0, -20) * orientation
-			node.parentNode?.addChildNode(blasterNode)
+			node.parent?.addChildNode(blasterNode)
 
-			let time = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 3))
-			dispatch_after(time, dispatch_get_main_queue()) {
+			DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
 				blasterNode.removeFromParentNode()
 			}
 

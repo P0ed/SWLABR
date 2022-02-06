@@ -3,6 +3,118 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## Master
+
+## [2.6.1](https://github.com/ReactiveX/RxSwift/releases/tag/2.6.0)
+
+#### Anomalies
+
+* Fixes issues with locking strategy for subjects. #936
+* Improves behavior of data sources on iOS 10. #999
+
+## [2.6.0](https://github.com/ReactiveX/RxSwift/releases/tag/2.6.0)
+
+#### Features
+
+* Adds Swift 2.3 compatibility.
+* Adds `UIViewController.rx_title` extension.
+* Adds `UIScrollView.rx_scrollEnabled` extension.
+* Resolve static analysis issues relating to non-use of an assigned value, and potential null dereferences in RxCocoa's Objective-C classes.
+* Changes `forwardDelegate` property type on `DelegateProxy` from `assign` to `weak`.
+* Simplifies UITable/CollectionView data source generic parameters.
+* Adds simple usage examples to UITable/CollectionView data source extensions.
+* Documents UITable/CollectionView data source extensions memory management and adds unit tests to cover that documentation.
+* Adds `.jazzy.yml`
+* Adds `UITabBar` extensions and delegate proxy wrapper
+    * rx_didSelectItem
+    * rx_willBeginCustomizing
+    * rx_didBeginCustomizing
+    * rx_willEndCustomizing
+    * rx_didEndCustomizing
+* Adds `UIPickerView` delegate proxy and extensions:
+    * rx_itemSelected
+* Adds `UIAlertAction.rx_enabled` extension.
+* Adds `UIButton.rx_title(controlState: UIControlState = .Normal)` extension.
+* Adds `UIPageControl.rx_currentPage` extension.
+* Adds `hasObservers` property to `*Subject`.
+
+#### Anomalies
+
+* Fixes problem with UITable/CollectionView releasing of data sources when result subscription disposable wasn't retained.
+* Fixes all Xcode analyzer warnings
+
+
+## [2.5.0](https://github.com/ReactiveX/RxSwift/releases/tag/2.5.0)
+
+#### Features
+
+* Exposes `installForwardDelegate`.
+* Adds `proxyForObject` as protocol extension and deprecates global function version.
+* Improves `installForwardDelegate` assert messaging.
+* Improves gesture recognizer extensions to use typed gesture recognizers in `rx_event`.
+* Adds `RxTextInput` protocol to enable creating reactive extensions for `UITextInput/NSTextInput`.
+* Adds `rx_willDisplayCell` and `rx_didEndDisplayingCell` extensions to `UITableView`.
+* Improves playgrounds.
+
+
+#### Anomalies
+
+* Fixes in documentation.
+* Turns off Bitcode for `RxTests` CocoaPods integration.
+* Fixes `UITextField.rx_text` and `UITextView.rx_text` integrations to be more robust when used with two way binding.
+* Fixes two way binding example code so it now properly handles IME used in Asian cultures and adds explanations how to properly perform two way bindings. https://github.com/ReactiveX/RxSwift/issues/649
+* Removes `distinctUntilChanged` from control extensions. https://github.com/ReactiveX/RxSwift/issues/626
+
+
+## [2.4.0](https://github.com/ReactiveX/RxSwift/releases/tag/2.4)
+
+#### Features
+
+* adds `Driver.drive` with `Variable` parameter.
+* exposes `RxSearchBarDelegateProxy`
+* adds `rx_cancelButtonClicked` to `UISearchBar`.
+* adds `rx_searchButtonClicked` to `UISearchBar`.
+* adds `UISearchController` extensions:
+  * `rx_didDismiss`
+  * `rx_didPresent`
+  * `rx_present`
+  * `rx_willDismiss`
+  * `rx_willPresent`
+
+
+#### Anomalies
+
+* Fixes anomaly with `multicast` disposing subscription.
+* Small grammar fixes in code.
+* Fixes in documentation.
+
+## [2.3.1](https://github.com/ReactiveX/RxSwift/releases/tag/2.3.1)
+
+#### Features
+
+* Xcode 7.3 / Swift 2.2 support
+
+## [2.3.0](https://github.com/ReactiveX/RxSwift/releases/tag/2.3.0)
+
+#### Features
+
+* Adds `rx_badgeValue` to `UITabBarItem`.
+* Adds `rx_progress` to `UIProgresView`.
+* Adds `rx_selectedScopeButtonIndex` to `UISearchBar`.
+* Adds `asyncInstance` to `MainScheduler`.
+* Makes `name` parmeter optional for `rx_notification` extension.
+* Adds `UnitTests.md`.
+* Adds `Tips.md`.
+* Updates playground inline documentation with running instructions.
+* Synchronizes copy of `RxDataSources` source files inside example project to `0.6` release.
+
+#### Anomalies
+
+* Fixes anomaly with synchronization in disposable setter of `SingleAssignmentDisposable`.
+* Improves `DelegateProxy` memory management.
+* Fixes anomaly during two way binding of `UITextView` text value.
+* Improves `single` operator so it handles reentrancy better.
+
 ## [2.2.0](https://github.com/ReactiveX/RxSwift/releases/tag/2.2.0)
 
 #### Public Interface anomalies
