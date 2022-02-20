@@ -93,16 +93,8 @@
 		5F1A425C1C9449B300369F5E /* syreen_p.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = syreen_p.wav; sourceTree = "<group>"; };
 		5F1A425D1C9449B300369F5E /* urquan_p.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = urquan_p.wav; sourceTree = "<group>"; };
 		5F1A42731C944F8B00369F5E /* WorldBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldBehavior.swift; sourceTree = "<group>"; };
-		5F3EA2E827B066B300B17DA9 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		5F3EA2E927B066B300B17DA9 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		5F3EA2EB27B06BA300B17DA9 /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
-		5F4ED2611C7C672200D06459 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Cartfile; sourceTree = "<group>"; };
 		5F4ED2631C7C68C400D06459 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		5F4ED2671C7C69D300D06459 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = "<group>"; };
-		5F4ED2691C7C69D300D06459 /* OpenEmuSystem.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuSystem.framework; sourceTree = "<group>"; };
-		5F4ED26B1C7C69D300D06459 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = "<group>"; };
-		5F4ED26D1C7C69D300D06459 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
-		5F4ED26F1C7C69D300D06459 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		5F9E31931C72649100BE2995 /* SWLABR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWLABR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9E31961C72649100BE2995 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F9E31981C72649100BE2995 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -179,44 +171,12 @@
 			path = Extra;
 			sourceTree = "<group>";
 		};
-		5F4ED2601C7C671A00D06459 /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				5F4ED2651C7C69D300D06459 /* Build */,
-				5F4ED2611C7C672200D06459 /* Cartfile */,
-			);
-			path = Carthage;
-			sourceTree = "<group>";
-		};
-		5F4ED2651C7C69D300D06459 /* Build */ = {
-			isa = PBXGroup;
-			children = (
-				5F4ED2661C7C69D300D06459 /* Mac */,
-			);
-			path = Build;
-			sourceTree = "<group>";
-		};
-		5F4ED2661C7C69D300D06459 /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				5F4ED2671C7C69D300D06459 /* OpenEmuBase.framework */,
-				5F4ED2691C7C69D300D06459 /* OpenEmuSystem.framework */,
-				5F4ED26B1C7C69D300D06459 /* RxBlocking.framework */,
-				5F4ED26D1C7C69D300D06459 /* RxCocoa.framework */,
-				5F4ED26F1C7C69D300D06459 /* RxSwift.framework */,
-			);
-			path = Mac;
-			sourceTree = "<group>";
-		};
 		5F9E318A1C72649100BE2995 = {
 			isa = PBXGroup;
 			children = (
 				5F4ED2631C7C68C400D06459 /* README.md */,
 				5F1A42321C8F0E9700369F5E /* SWLABR.md */,
-				5F3EA2E827B066B300B17DA9 /* Cartfile */,
-				5F3EA2E927B066B300B17DA9 /* Cartfile.resolved */,
 				5F9E31951C72649100BE2995 /* SWLABR */,
-				5F4ED2601C7C671A00D06459 /* Carthage */,
 				5F9E31941C72649100BE2995 /* Products */,
 			);
 			sourceTree = "<group>";

@@ -1,1 +1,1 @@
-carthage update --platform Mac
+
